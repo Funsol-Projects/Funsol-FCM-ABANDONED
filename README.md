@@ -44,7 +44,7 @@ Add maven repository in project level build.gradle or in latest project setting.
 Add PandaFCM dependencies in App level build.gradle.
 ```
     dependencies {
-           implementation 'com.github.Funsol-DevOps:PandaFCM:1.5'
+           implementation 'com.github.Funsol-DevOps:PandaFCM:1.7'
     }
 ```  
 
