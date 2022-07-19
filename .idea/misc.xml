@@ -6,7 +6,10 @@
         <entry key="..\:/Saad/PandaLibs/PandaFCM/FCMLib/src/main/res/drawable/round_corners_2dp.xml" value="0.3828125" />
         <entry key="..\:/Saad/PandaLibs/PandaFCM/FCMLib/src/main/res/layout/firebase_notification_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Saad/PandaLibs/PandaFCM/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="FCMLib/src/main/res/layout/firebase_notification_view.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2907692307692308" />
+        <entry key="app/src/main/res/layout/firebase_notification_view.xml" value="0.14010416666666667" />
       </map>
     </option>
   </component>

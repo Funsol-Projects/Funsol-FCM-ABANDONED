@@ -20,6 +20,8 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import java.util.concurrent.atomic.AtomicInteger
 import com.squareup.picasso.Picasso
+import java.lang.IllegalArgumentException
+import java.lang.IllegalStateException
 
 
 class PandaFirebaseMessagingService : FirebaseMessagingService() {
@@ -57,6 +59,7 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onNewToken(p0: String) {
         super.onNewToken(p0)
+        Log.d("MyAppTag", p0)
     }
 
     @SuppressLint("UnspecifiedImmutableFlag")
@@ -127,12 +130,18 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
 
 
         //Set Images into remoteViews
-        Picasso.get().load(icon)
-            .into(remoteViews, R.id.iv_icon, notificationID, notificationBuilder.build())
-        if (image != null) {
-            remoteViews.setViewVisibility(R.id.iv_feature, View.VISIBLE)
-            Picasso.get().load(image)
-                .into(remoteViews, R.id.iv_feature, notificationID, notificationBuilder.build())
+        try {
+            Picasso.get().load(icon)
+                .into(remoteViews, R.id.iv_icon, notificationID, notificationBuilder.build())
+            if (image != null) {
+                remoteViews.setViewVisibility(R.id.iv_feature, View.VISIBLE)
+                Picasso.get().load(image)
+                    .into(remoteViews, R.id.iv_feature, notificationID, notificationBuilder.build())
+            }
+        } catch (e: Exception) {
+        } catch (e: java.lang.Exception) {
+        } catch (e: IllegalStateException) {
+        } catch (e: IllegalArgumentException) {
         }
     }
 
@@ -143,7 +152,6 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
             setStoreIntent(storePackage)
         }
     }
-
 
     private fun setStoreIntent(storePackage: String): Intent {
         return try {

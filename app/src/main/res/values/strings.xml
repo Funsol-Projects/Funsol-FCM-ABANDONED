@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PandaFCM</string>
+    <string name="default_notification_channel_id">Default notification channel id</string>
+    <string name="default_notification_channel_name">default notification channel name</string>
+    <string name="ad">AD</string>
+    <string name="image_here">Image here</string>
 </resources>

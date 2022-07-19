@@ -42,7 +42,12 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.4.2')
     implementation 'com.google.firebase:firebase-messaging'
 
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation project(path: ':FCMLib')
 //    implementation 'com.github.Funsol-DevOps:PandaFCM:v1.1'
+
+    //Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
 
 }

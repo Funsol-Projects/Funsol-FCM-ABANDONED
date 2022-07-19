@@ -5,19 +5,32 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
-        tools:ignore="QueryAllPackagesPermission" />
+    <!--        <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"-->
+    <!--            tools:ignore="QueryAllPackagesPermission" />-->
 
-    <application
-        android:allowBackup="true">
+    <application android:allowBackup="true">
 
         <service
             android:name=".PandaFirebaseMessagingService"
-            android:exported="true">
-            <intent-filter>
+            android:directBootAware="true"
+            android:exported="true"
+            tools:node="replace"
+            tools:targetApi="n">
+            <intent-filter android:priority="-500">
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            tools:node="replace">
+
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
