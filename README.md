@@ -1,4 +1,4 @@
-# PandaFCM (Firebase Cloud Messaging)
+# Funsol FCM
 
 [![](https://jitpack.io/v/Funsol-Projects/Funsol-FCM.svg)](https://jitpack.io/#Funsol-Projects/Funsol-FCM)
 
@@ -75,7 +75,7 @@ If you want to stop receiving notification from the subscribed topic simply call
 
 MIT License
 
-Copyright (c) [2021] [Saad Ali Shujaat]
+Copyright (c) [2021]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
 associated documentation files (the "Software"), to deal in the Software without restriction,
