@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.pandalibs.pandafcm"
-        minSdk 21
-        targetSdk 31
+        minSdk 23
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
-    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
     implementation 'com.google.firebase:firebase-messaging'
 
     implementation 'com.squareup.picasso:picasso:2.71828'

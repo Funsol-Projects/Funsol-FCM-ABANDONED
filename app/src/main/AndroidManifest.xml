@@ -4,9 +4,7 @@
     package="com.pandalibs.pandafcm">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <!--    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"-->
-    <!--        tools:ignore="QueryAllPackagesPermission" />-->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
         android:allowBackup="true"

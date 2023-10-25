@@ -7,6 +7,7 @@ import android.os.Build
 import android.util.Log
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
+import com.pandalibs.fcmlib.PandaFirebaseMessagingService.Companion.TAG
 import kotlinx.coroutines.runBlocking
 
 class PandaFCM {
@@ -17,7 +18,7 @@ class PandaFCM {
                 initializeFirebase(context)
                 createChannelForFCM(context)
                 FirebaseMessaging.getInstance().subscribeToTopic(topic)
-                Log.i("TAG", "setupFCM: Panda Setup Successful")
+                Log.i(TAG, "setupFCM: Panda Setup Successful")
             }
         }
 
@@ -28,9 +29,9 @@ class PandaFCM {
         private fun initializeFirebase(context: Context) {
             try {
                 FirebaseApp.initializeApp(context)
-                Log.i("TAG", "setupFCM: Firebase Initialized")
+                Log.i(TAG, "setupFCM: Firebase Initialized")
             } catch (e: Exception) {
-                Log.i("TAG", "setupFCM: ${e.message}")
+                Log.i(TAG, "setupFCM: ${e.message}")
             }
         }
 
@@ -46,7 +47,7 @@ class PandaFCM {
                         channelName, NotificationManager.IMPORTANCE_DEFAULT
                     )
                 )
-                Log.i("TAG", "setupFCM: Channel Created Successfully")
+                Log.i(TAG, "setupFCM: Channel Created Successfully")
             }
         }
     }

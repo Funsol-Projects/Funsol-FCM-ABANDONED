@@ -18,11 +18,8 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import java.util.concurrent.atomic.AtomicInteger
 import com.squareup.picasso.Picasso
-import java.lang.IllegalArgumentException
-import java.lang.IllegalStateException
-
+import java.util.concurrent.atomic.AtomicInteger
 
 class PandaFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -59,7 +56,7 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onNewToken(p0: String) {
         super.onNewToken(p0)
-        Log.d("MyAppTag", p0)
+        Log.d(TAG, p0)
     }
 
     @SuppressLint("UnspecifiedImmutableFlag")
@@ -92,7 +89,6 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
             PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
         }
 
-        Log.i(TAG, "longDesc: $longDesc")
 
         //Make Remote Views For text
         val remoteViews = RemoteViews(packageName, R.layout.firebase_notification_view)
@@ -138,10 +134,10 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
                 Picasso.get().load(image)
                     .into(remoteViews, R.id.iv_feature, notificationID, notificationBuilder.build())
             }
-        } catch (e: Exception) {
-        } catch (e: java.lang.Exception) {
-        } catch (e: IllegalStateException) {
-        } catch (e: IllegalArgumentException) {
+        } catch (_: Exception) {
+        } catch (_: java.lang.Exception) {
+        } catch (_: IllegalStateException) {
+        } catch (_: IllegalArgumentException) {
         }
     }
 
@@ -174,9 +170,8 @@ class PandaFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
-
     companion object {
-        private const val TAG = "PandaFirebaseMsgService"
+        const val TAG = "PandaFirebaseMsgService"
         private val seed = AtomicInteger()
         fun getNextInt(): Int {
             return seed.incrementAndGet()
