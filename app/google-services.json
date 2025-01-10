@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "455556999626",
+    "project_id": "funsoldevops-a1bb4",
+    "storage_bucket": "funsoldevops-a1bb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455556999626:android:85bc438e5cd75019f28733",
+        "android_client_info": {
+          "package_name": "com.pandalibs.pandafcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455556999626-61437qrrn93ciopl255ea8s1km4ebov1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7vrN638hVvXIB6Iky_s2ikxpycBZC3bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455556999626-61437qrrn93ciopl255ea8s1km4ebov1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
