@@ -1,4 +1,4 @@
-# Funsol FCM
+# Funsol FCM Abandoned
 
 [![](https://jitpack.io/v/Funsol-Projects/Funsol-FCM.svg)](https://jitpack.io/#Funsol-Projects/Funsol-FCM)
 
